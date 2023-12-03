@@ -1271,9 +1271,9 @@ body::-webkit-scrollbar-thumb{
 	     -o-transition: all .3s ease;
 	        transition: all .3s ease;
 }
-.elisc_tm_portfolio_title .buttons a:hover{
+/* .elisc_tm_portfolio_title .buttons a:hover{
 	background-color: #130F49;
-}
+} */
 .elisc_tm_portfolio_title .buttons a:last-child{
 	margin-right: 0px;
 }
