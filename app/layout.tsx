@@ -1,8 +1,11 @@
 import type React from "react"
 import "@/app/globals.css"
 import { Inter } from "next/font/google"
+import posthog from 'posthog-js'
 
 import { ThemeProvider } from "@/components/theme-provider"
+import { Providers } from "./providers"
+import { PostHogPageView, ThemeTracker } from "./posthog-trackers"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -12,7 +15,7 @@ const inter = Inter({
 export const metadata = {
   title: "Kartik Sharma - Fullstack Developer",
   description: "Portfolio website of Kartik Sharma, a fullstack developer specializing in modern web applications.",
-    generator: 'v0.dev'
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -23,13 +26,21 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          {children}
-        </ThemeProvider>
+        <Providers>
+          <PostHogPageView />
+          <ThemeProvider 
+            attribute="class" 
+            defaultTheme="light" 
+            enableSystem 
+            disableTransitionOnChange
+          >
+            <ThemeTracker />
+            {children}
+          </ThemeProvider>
+        </Providers>
       </body>
     </html>
   )
 }
-
 
 import './globals.css'
