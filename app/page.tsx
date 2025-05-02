@@ -3,112 +3,61 @@ import { Github, Linkedin, Mail, Twitter, Youtube } from "lucide-react"
 import Link from "next/link"
 
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-10 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className=" px-5 flex h-14 items-center justify-center">
-          <div className="mr-4 hidden md:flex">
-            {/* <Link href="/" className="mr-6 flex items-center space-x-2">
-              <span className="font-normal">Kartik Sharma</span>
-            </Link> */}
-            <nav className="flex items-center space-x-6 text-sm font-medium">
-              <Link href="#about" className="transition-colors hover:text-foreground/80">
-                About
-              </Link>
-              <Link href="#skills" className="transition-colors hover:text-foreground/80">
-                Skills
-              </Link>
-              <Link href="#projects" className="transition-colors hover:text-foreground/80">
-                Projects
-              </Link>
-              <Link href="#contact" className="transition-colors hover:text-foreground/80">
-                Contact
-              </Link>
-            </nav>
+    <>
+
+      <main className="max-w-2xl lg:max-w-5xl mt-16 sm:mt-32 mx-auto">
+        <div className=" mx-5 sm:mx-0 flex flex-col space-y-5 max-w-xl">
+          <img src="/profile.jpeg" alt="Kartik Sharma" className="w-16 h-16 rounded-full" />
+          <h1 className="text-5xl font-bold tracking-tighter">Programmer. Tinkerer. <br />Powerlifter.</h1>
+          <p className="mt-6 font-bold text-base text-zinc-600">
+            Hey, I'm Kartik, a Fullstack Developer crafting elegant, efficient, and user-friendly web applications.
+          </p>
+          <p className="mt-6 font-bold text-base text-zinc-600">
+            I have worked with startups like <a href="https://nesoi.ai" target="_blank" rel="noreferrer">Nesoi.ai</a>, <a href="https://estatedekho.com/" target="_blank" rel="noreferrer">Estatedekho.com</a>, <a href="https://weazy.in/" target="_blank" rel="noreferrer">Weazy.in</a> and many other startups, specializing in Fullstack Development.
+          </p>
+          <div className="flex gap-4 mt-6">
+            <Link href="https://github.com/kartik126" target="_blank" rel="noreferrer">
+              <Button className="rounded-full" variant="outline" size="icon">
+                <Github className="h-2 w-2" />
+                <span className="sr-only">GitHub</span>
+              </Button>
+
+            </Link>
+            <Link href="https://x.com/beingatx" target="_blank" rel="noreferrer">
+              <Button className="rounded-full" variant="outline" size="icon">
+
+                <Twitter className="h-4 w-4" />
+                <span className="sr-only">X (Twitter)</span>
+              </Button>
+            </Link>
+            <Link href="https://www.linkedin.com/in/kartik-sharma-9b0640172/" target="_blank" rel="noreferrer">
+              <Button className="rounded-full" variant="outline" size="icon">
+                <Linkedin className="h-2 w-2" />
+                <span className="sr-only">LinkedIn</span>
+              </Button>
+            </Link>
+            <Link href="https://www.youtube.com/@beingkartik4506" target="_blank" rel="noreferrer">
+              <Button className="rounded-full" variant="outline" size="icon">
+
+                <Youtube className="h-4 w-4" />
+                <span className="sr-only">YouTube</span>
+              </Button>
+            </Link>
+
           </div>
-          <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
-            <div className="w-full flex-1 md:w-auto md:flex-none">
-              <nav className="flex items-center justify-between md:hidden">
-                <Link href="/" className="flex items-center space-x-2">
-                  <span className="font-normal">Kartik Sharma</span>
-                </Link>
-                <Button variant="ghost" size="icon">
-                  <span className="sr-only">Toggle menu</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="h-6 w-6"
-                  >
-                    <line x1="4" x2="20" y1="12" y2="12" />
-                    <line x1="4" x2="20" y1="6" y2="6" />
-                    <line x1="4" x2="20" y1="18" y2="18" />
-                  </svg>
-                </Button>
-              </nav>
-            </div>
-            <div className="flex items-center gap-2">
-              <Link href="https://www.youtube.com/@beingkartik4506" target="_blank" rel="noreferrer">
-                <Button variant="ghost" size="icon">
-                  <Youtube className="h-4 w-4" />
-                  <span className="sr-only">YouTube</span>
-                </Button>
-              </Link>
-              <Link href="https://github.com/kartik126" target="_blank" rel="noreferrer">
-                <Button variant="ghost" size="icon">
-                  <Github className="h-4 w-4" />
-                  <span className="sr-only">GitHub</span>
-                </Button>
-              </Link>
-              <Link href="https://www.linkedin.com/in/kartik-sharma-9b0640172/" target="_blank" rel="noreferrer">
-                <Button variant="ghost" size="icon">
-                  <Linkedin className="h-4 w-4" />
-                  <span className="sr-only">LinkedIn</span>
-                </Button>
-              </Link>
-              <Link href="mailto:sharmakartik9921@gmail.com">
-                <Button variant="ghost" size="icon">
-                  <Mail className="h-4 w-4" />
-                  <span className="sr-only">Email</span>
-                </Button>
-              </Link>
-              <Link href="https://x.com/beingatx" target="_blank" rel="noreferrer">
-                <Button variant="ghost" size="icon">
-                  <Twitter className="h-4 w-4" />
-                  <span className="sr-only">X (Twitter)</span>
-                </Button>
-              </Link>
-            </div>
-          </div>
+          {/* <div className="mt-6 flex flex-col gap-2 min-[400px]:flex-row">
+            <Link href="#contact">
+              <Button>Get in touch</Button>
+            </Link>
+            <Link href="#projects">
+              <Button variant="outline">View my work</Button>
+            </Link>
+          </div> */}
         </div>
-      </header>
-      <main className="flex-1">
-        <section className="py-24">
-          <div className="flex flex-col items-center gap-4 text-center">
-            <h1 className="text-4xl font-light tracking-tighter sm:text-4xl">Kartik Sharma 👋🏻</h1>
-            <p className="max-w-[700px] text-base text-muted-foreground sm:text-sm">
-              Fullstack Developer crafting elegant, efficient, and user-friendly web applications.
-            </p>
-            <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <Link href="#contact">
-                <Button>Get in touch</Button>
-              </Link>
-              <Link href="#projects">
-                <Button variant="outline">View my work</Button>
-              </Link>
-            </div>
-          </div>
-        </section>
-        <section id="about" className=" py-12 py-24">
+        {/* <section id="about" className=" py-12 py-24">
           <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
             <h2 className="text-2xl font-light leading-[1.1] sm:text-2xl md:text-4xl">About Me</h2>
             <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-sm sm:leading-6">
@@ -317,9 +266,9 @@ export default function Home() {
               </Link>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
-      <footer className="border-t py-6 md:py-0">
+      {/* <footer className="border-t py-6 md:py-0">
         <div className="px-5 flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
           <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
             © {new Date().getFullYear()} Kartik Sharma. All rights reserved.
@@ -345,7 +294,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </footer>
-    </div>
+      </footer> */}
+    </>
   )
 }

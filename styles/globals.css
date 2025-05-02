@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 @layer utilities {
@@ -87,8 +87,35 @@ body {
 @layer base {
   * {
     @apply border-border;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
   }
   body {
     @apply bg-background text-foreground;
   }
 }
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/helvetica-neue-5/HelveticaNeueBlack.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/helvetica-neue-5/HelveticaNeueBlackItalic.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/helvetica-neue-5/HelveticaNeueBold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/helvetica-neue-5/HelveticaNeueBoldItalic.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+}
+/* ...repeat for other weights/styles as needed... */

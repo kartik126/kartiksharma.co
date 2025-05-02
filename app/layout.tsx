@@ -26,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
+        <Nav />
         <Providers>
           <PostHogPageView />
           <ThemeProvider 
@@ -44,3 +45,4 @@ export default function RootLayout({
 }
 
 import './globals.css'
+import Nav from "@/components/nav"
