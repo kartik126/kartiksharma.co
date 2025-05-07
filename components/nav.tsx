@@ -26,24 +26,28 @@ export default function Nav() {
                     <nav className="border border-gray-200 bg-white rounded-full shadow-[0_4px_24px_0_rgba(0,0,0,0.07)] px-8 py-2 flex space-x-8">
                         <Link
                             href="/projects"
-                            className={`text-sm font-semibold transition ${
-                                pathname === "/projects"
-                                    ? "text-purple-500"
-                                    : "text-gray-900 hover:text-gray-700"
-                            }`}
+                            className={`text-sm font-semibold transition ${pathname === "/projects"
+                                ? "text-purple-500"
+                                : "text-gray-900 hover:text-gray-700"
+                                }`}
                         >
                             Projects
                         </Link>
                         <Link
                             href="/blogs"
-                            className={`text-sm font-semibold transition ${
-                                pathname === "/blogs"
-                                    ? "text-purple-500"
-                                    : "text-gray-900 hover:text-gray-700"
-                            }`}
+                            className={`text-sm font-semibold transition ${pathname === "/blogs"
+                                ? "text-purple-500"
+                                : "text-gray-900 hover:text-gray-700"
+                                }`}
                         >
                             Blog
                         </Link>
+                        <div
+                            className={`cursor-pointer text-sm font-semibold transition text-gray-900 hover:text-gray-700`}
+                            onClick={() => window.open("./resume/KartikSharmaResume (2).pdf", "_blank")}
+                        >
+                            Resume
+                        </div>
                     </nav>
                 </div>
             </div>
@@ -71,22 +75,20 @@ export default function Nav() {
                 <div className="md:hidden mt-2 bg-white rounded-xl shadow-lg border border-gray-100 p-4 flex flex-col items-center space-y-4">
                     <Link
                         href="/projects"
-                        className={`text-base font-semibold transition ${
-                            pathname === "/projects"
-                                ? "text-purple-500"
-                                : "text-gray-900 hover:text-gray-700"
-                        }`}
+                        className={`text-base font-semibold transition ${pathname === "/projects"
+                            ? "text-purple-500"
+                            : "text-gray-900 hover:text-gray-700"
+                            }`}
                         onClick={() => setMenuOpen(false)}
                     >
                         Projects
                     </Link>
                     <Link
                         href="/blogs"
-                        className={`text-base font-semibold transition ${
-                            pathname === "/blogs"
-                                ? "text-purple-500"
-                                : "text-gray-900 hover:text-gray-700"
-                        }`}
+                        className={`text-base font-semibold transition ${pathname === "/blogs"
+                            ? "text-purple-500"
+                            : "text-gray-900 hover:text-gray-700"
+                            }`}
                         onClick={() => setMenuOpen(false)}
                     >
                         Blog

@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Providers } from "./providers"
 import { PostHogPageView, ThemeTracker } from "./posthog-trackers"
 
+
 const inter = Inter({
   subsets: ["latin"],
   weight: ["300", "400"], // Using lighter weights
@@ -29,16 +30,17 @@ export default function RootLayout({
         <Nav />
         <Providers>
           <PostHogPageView />
-          <ThemeProvider 
-            attribute="class" 
-            defaultTheme="light" 
-            enableSystem 
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="light"
+            enableSystem
             disableTransitionOnChange
           >
             <ThemeTracker />
             {children}
           </ThemeProvider>
         </Providers>
+        {/* <WhatsAppButton /> */}
       </body>
     </html>
   )
@@ -46,3 +48,5 @@ export default function RootLayout({
 
 import './globals.css'
 import Nav from "@/components/nav"
+import WhatsAppButton from "@/components/WhatsAppButton"
+
