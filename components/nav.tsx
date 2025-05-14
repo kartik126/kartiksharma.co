@@ -44,7 +44,7 @@ export default function Nav() {
                         </Link>
                         <div
                             className={`cursor-pointer text-sm font-semibold transition text-gray-900 hover:text-gray-700`}
-                            onClick={() => window.open("./resume/KartikSharmaResume (2).pdf", "_blank")}
+                            onClick={() => window.open("./resume/KartikSharmaResume - a.pdf", "_blank")}
                         >
                             Resume
                         </div>
@@ -93,6 +93,15 @@ export default function Nav() {
                     >
                         Blog
                     </Link>
+                    <div
+                        className={`text-base font-semibold transition ${pathname === "/projects"
+                            ? "text-purple-500"
+                            : "text-gray-900 hover:text-gray-700"
+                            }`}
+                        onClick={() => window.open("./resume/KartikSharmaResume - a.pdf", "_blank")}
+                    >
+                        Resume
+                    </div>
                 </div>
             )}
         </div>
