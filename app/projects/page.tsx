@@ -21,7 +21,7 @@ export default function Blogs() {
                     {projects.map((project, idx) => (
                         <div
                             key={idx}
-                            className="group cursor-pointer hover:bg-gray-50 transition-all duration-300 bg-white rounded-xl shadow-md p-6 flex flex-col items-start text-center border border-gray-100"
+                            className="group cursor-pointer hover:bg-gray-50 transition-all duration-300 bg-white rounded-xl shadow-md p-5 flex flex-col items-start text-center border border-gray-100"
                         >
                             <img
                                 src={project.logo}

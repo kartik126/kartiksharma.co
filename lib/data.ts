@@ -14,6 +14,12 @@ export const projects = [
         appLink: "https://play.google.com/store/apps/details?id=com.estatedekho.buyer",
     },
     {
+        logo: "/whisperwall.jpg",
+        name: "Whisperwall",
+        description: "A virtual space where you can leave anonymous notes on the walls (100+ user)",
+        link: "https://whisperwall.space/",
+    },
+    {
         logo: "/spotipers.png",
         name: "Spotipers",
         description: "Discover what your favorite songs on Spotify reveal about your personality.",
