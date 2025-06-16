@@ -32,8 +32,8 @@ export default function BlogPost({ params }: BlogPostPageProps) {
         </Link>
 
         <article>
-          <header className="mb-8">
-            <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+          <header className="mb-12">
+            <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl border-b pb-4">
               {post.title}
             </h1>
             <div className="flex items-center gap-2 text-sm text-gray-500 mt-4">
@@ -61,7 +61,7 @@ export default function BlogPost({ params }: BlogPostPageProps) {
             )}
           </header>
 
-          <div className="prose prose-neutral dark:prose-invert max-w-none [&>p]:mb-8">
+          <div className="prose prose-neutral dark:prose-invert max-w-none">
             <ReactMarkdown
               components={{
                 code({node, inline, className, children, ...props}: any) {
@@ -70,7 +70,7 @@ export default function BlogPost({ params }: BlogPostPageProps) {
                     <SyntaxHighlighter
                       style={vscDarkPlus}
                       language={match[1]}
-                      PreTag="div"
+                      PreTag="pre"
                       {...props}
                     >
                       {String(children).replace(/\n$/, "")}
@@ -85,7 +85,7 @@ export default function BlogPost({ params }: BlogPostPageProps) {
                   return (
                     <img
                       {...props}
-                      className="rounded-lg border shadow max-w-full h-auto my-4"
+                      className="rounded-lg border shadow-lg max-w-full h-auto my-8"
                       alt={props.alt || ""}
                     />
                   );
